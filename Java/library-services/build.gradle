@@ -1,0 +1,11 @@
+dependencies {
+      compile project(':library-lib')
+	  compile project(':library-model')
+	  compile project(':library-common')
+	  compile project(':library-core')
+	  
+}
+
+   
+
+

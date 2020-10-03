@@ -1,0 +1,38 @@
+
+/*test {
+    useJUnit()
+
+    maxHeapSize = '2G'
+}*/
+
+apply plugin: 'java'
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    testCompile(
+            'junit:junit:4.12',
+            'org.junit.jupiter:junit-jupiter-api:5.4.0'
+    )
+    testRuntime(
+            'org.junit.jupiter:junit-jupiter-engine:5.4.0',
+            'org.junit.vintage:junit-vintage-engine:5.4.0'
+    )
+
+      //compile project(':library-lib')
+	  compile project(':library-model')
+	  compile project(':library-common')
+	  compile project(':library-core')
+	  compile project(':library-services')
+	
+}
+ 
+test {
+    useJUnitPlatform()
+     testLogging {
+        showStandardStreams = true
+        }
+}
+
