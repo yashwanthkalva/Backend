@@ -1,0 +1,29 @@
+apply plugin: 'war'
+
+war {
+	manifest{ attributes "Web-ContextPath": "/library" }	
+	from('src/main/java') { 
+		include '**/*.properties' 
+		into('WEB-INF/classes')
+	}
+	 archiveName "library.war"
+	 
+}
+
+dependencies {
+      compile project(':library-lib') 
+	  compile project(':library-model')
+	  compile project(':library-common')
+	  compile project(':library-core')
+	  compile project(':library-services')
+	  compile project(':library-test')
+	  providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+}
+
+task deploylibrary(type: Copy) {
+    from war.archivePath
+    into "C:/apache-tomcat-9.0.69/webapps"
+}
+
+
+

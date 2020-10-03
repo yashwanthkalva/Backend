@@ -1,0 +1,7 @@
+task buildModel {
+  println "library model build in progress...."
+}
+
+dependencies {
+      compile project(':library-lib')
+}

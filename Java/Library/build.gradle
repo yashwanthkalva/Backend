@@ -1,0 +1,15 @@
+subprojects {
+
+  
+  apply plugin: "java"
+  apply plugin: "eclipse"
+  sourceCompatibility = 1.8
+ 
+  repositories {
+   // jcenter()
+	  maven{
+	   url  'http://central.maven.org/maven2'
+	 }
+  }
+
+}

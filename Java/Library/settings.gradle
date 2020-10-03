@@ -1,0 +1,1 @@
+include ":library-web", ":library-services", ":library-common", ":library-lib", ":library-core", ":library-model",":library-test"
