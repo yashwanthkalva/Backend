@@ -2,7 +2,7 @@
 
 Write a small CLI program that:
 
-1. Downloads the zip file at https://raksul-code-review.s3-ap-northeast-1.amazonaws.com/datasets/foc-slack-export.zip and stores it locally.
+1. Store zip file foc-slack-export.zip locally.
 
 1. Reads the zip file `foc-slack-export.zip` without unpacking it first.
 
